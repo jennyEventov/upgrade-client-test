@@ -1,0 +1,26 @@
+<div>
+    <div style="background-color: aliceblue; font-size: initial; font-weight: bold; margin: 7px 0; padding: 5px;">ריכוז מידע בתהליך</div>
+    <div class="test-header content-inline">
+        <table style="margin-top: 16px;  margin-right: 10px;">
+            <tr>
+                <td style="padding: 0px 28px;">פרטי מבוטח: </td>
+                <td style="padding: 0px 28px;">{{vm.process.insured.firstName}} {{vm.process.insured.lastName}}</td>
+                <td  style="padding: 0px 28px;">{{vm.process.insured.identity}}</td>
+                <td  style="padding: 0px 28px;">{{vm.process.insured.age}}</td>
+                <td  style="padding: 0px 28px;">{{vm.process.insured.address.streetName}}, {{vm.process.insured.address.cityName}} </td>
+                <td class="invalid-text"  style="padding: 0px 28px;">
+                    <span>{{vm.isCompanyEmployer()}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td  style="padding: 0px 28px;"></td>
+                <td  style="padding: 0px 28px;">שם</td>
+                <td  style="padding: 0px 28px;">ת.ז</td>
+                <td  style="padding: 0px 28px;">גיל</td>
+                <td  style="padding: 0px 28px;">כתובת</td>
+                <td  style="padding: 0px 28px;"></td>
+            </tr>
+        </table>
+    </div>
+    <bb-component add="vm.addInsuredToContacts()"></bb-component>
+</div>
