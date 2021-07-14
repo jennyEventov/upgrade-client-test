@@ -1,0 +1,25 @@
+<div class="ims-panel-header full-width content-inline">
+    <div style="padding: 0px 28px;">
+        <span class="ims-text" >תביעת אל: {{vm.processModel.superClaim.superClaimStatus.value}}</span>
+        <span class="invalid-text" ng-if="vm.hasIrragularMark()">חריגה</span>
+    </div>
+    <div style="padding: 0px 28px;">
+        <span class="invalid-text" ng-if="vm.processModel.superClaim.inquiryPorcessFlag">{{vm.claimRemarks()}}</span>
+    </div>
+    <div style="padding: 0px 28px;">
+        <span class="ims-text">מצב תביעה: </span>
+        <span class="ims-text" >{{vm.processModel.superClaim.superClaimStatus.value}}</span>
+    </div>
+    <div style="padding: 0px 28px;">
+        <span class="invalid-text" ng-if="vm.processModel.superClaim.deathAfterDisabilityFlag">פטירה מנכות</span>
+    </div>
+    <div style="padding: 0px 28px;">
+        <span class="ims-text">תביעות משתתפות: </span>
+        <span class="ims-text long-text width-percent-40" ims-tooltip="vm.getClaimPolicies()" >{{vm.getClaims()}}</span>
+    </div>
+    <div >
+        <button class="button button-dark" data-ng-click="vm.executeRefresh()">
+           רענון תהליך
+        </button>
+    </div>
+</div>
