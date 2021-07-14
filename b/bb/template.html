@@ -1,0 +1,25 @@
+<div>
+    <div style="background-color: aliceblue; font-size: initial; font-weight: bold; margin: 7px 0; padding: 5px;">ריכוז אנשי קשר</div>
+    <div class="content-inline" style="margin-top: 16px;  margin-right: 10px;">
+        <div style="padding: 0px 28px;">
+            <span>מספר אנשי קשר בתהליך: </span>
+            <span>{{vm.count}}</span>
+        </div>
+        <span ng-if-start="vm.isToShow">פעולות אפשריות: </span>
+        <div class="width-percent-15">
+            <button class="button button-dark" data-ng-click="vm.addToContacts()">
+                הוספת מבוטח
+            </button>
+        </div>
+        <div ng-if-end="vm.isToShow" class="width-percent-10">
+            <button class="button button-dark" data-ng-click="vm.deleteContacts()">
+                איפוס מלא
+            </button>
+        </div>
+        <div class="width-percent-30">
+            <button class="button button-dark" data-ng-click="vm.resetContacts()">
+                איפוס אנשי קשר
+            </button>
+        </div>
+    </div>
+</div>
