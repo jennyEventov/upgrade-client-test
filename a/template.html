@@ -1,0 +1,52 @@
+<div style="margin-top: 15px">
+    <div style="background-color: aliceblue; font-size: initial; font-weight: bold; margin: 7px 0; padding: 5px;">אנשי קשר</div>
+    <div>
+        <div class="table-container has-spacing-top max-height-270">
+            <table class="table-migdal table-striped has-hover-effect" fixed-header>
+                <colgroup>
+                    <col width="28px">
+                    <col width="81px">
+                    <col width="64px">
+                    <col width="122px">
+                    <col width="92px">
+                    <col width="107px">
+                </colgroup>
+                <thead class="has-border-bottom no-padding">
+                    <tr>
+                        <th></th>
+                        <th>שם איש קשר</th>
+                        <th>סוג</th>
+                        <th>כתובת</th>
+                        <th>טלפון נייד</th>
+                        <th>דוא"ל</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="contact in vm.contactPersons" ng-init="isInsuredInHealthClaim = vm.isInsuredInHealthClaim(vm.contact)">
+                        <td>
+                            <span ng-if="!isInsuredInHealthClaim" data-ng-class="{'icon-envelope': contact.deliveryFlag}"></span>
+                        </td>
+                        <td >
+                            {{contact.firstName}} {{contact.lastName}}
+                        </td>
+                        <td>
+                            {{contact.type.value}}
+                        </td>
+                        <td>
+                            {{contact.address.cityName}} {{contact.address.streetName}}
+                        </td>
+                        <td>
+                            {{contact.cellPhone}}
+                        </td>
+                        <td>
+                            <div>{{contact.email}}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <fieldset class="content-inline pull-right">
+            <a href="" ng-click="vm.addContactPerson()">הוסף איש קשר</a>
+        </fieldset>
+    </div>
+</div>
