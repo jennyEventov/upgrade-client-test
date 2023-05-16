@@ -4,7 +4,7 @@
     function uiTestComponent() {
         function controller($scope, $q, $filter) {
             /* jshint validthis: true */
-            var testa = null;
+            var testaty = null;
             var new = 0;
             var vm = this;
             vm.process = {
