@@ -4,6 +4,7 @@
     function uiTestComponent() {
         function controller($scope, $q, $filter) {
             /* jshint validthis: true */
+            var testa = null;
             var vm = this;
             vm.process = {
                 processType: "AMBULATORY_HEALTH_CLAIM",
