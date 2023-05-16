@@ -5,6 +5,7 @@
         function controller($scope, $q, $filter) {
             /* jshint validthis: true */
             var testa = null;
+            var new = 0;
             var vm = this;
             vm.process = {
                 processType: "AMBULATORY_HEALTH_CLAIM",
